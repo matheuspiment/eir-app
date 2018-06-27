@@ -8,7 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.github.matheuspiment.eir.R;
+import com.afollestad.materialdialogs.MaterialDialog;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
@@ -18,9 +18,11 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
+import br.ufg.inf.es.eir.R;
 import br.ufg.inf.es.eir.data.RemedyDAO;
 import br.ufg.inf.es.eir.model.Remedy;
 import br.ufg.inf.es.eir.presenter.BaseFragment;
+import br.ufg.inf.es.eir.web.WebRemedies;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -50,7 +52,8 @@ public class RemedyListFragment extends BaseFragment {
         super.onStart();
         EventBus.getDefault().register(this);
         initRecycler();
-        getRemedies();
+//        getRemedies();
+        tryRemedies();
     }
 
     @Override
@@ -82,6 +85,12 @@ public class RemedyListFragment extends BaseFragment {
         adapter.setRemedies(remedyList);
         adapter.notifyDataSetChanged();
         dismissDialog();
+    }
+
+    private void tryRemedies() {
+        WebRemedies webRemedies = new WebRemedies();
+
+        webRemedies.call();
     }
 
     @Subscribe(threadMode = ThreadMode.MAIN)

@@ -5,9 +5,8 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 
-import com.github.matheuspiment.eir.R;
-
 import br.ufg.inf.es.eir.presenter.list.RemedyListFragment;
+import br.ufg.inf.es.eir.presenter.list.UnitListFragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -35,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
     private void setupViewPager(ViewPager viewPager) {
         SectionsPageAdapter adapter = new SectionsPageAdapter(getSupportFragmentManager());
         adapter.addFragment(new RemedyListFragment(), "Remedios");
-//        adapter.addFragment(new UnitFragment(), "Unidades");
+        adapter.addFragment(new UnitListFragment(), "Unidades");
         viewPager.setAdapter(adapter);
     }
 

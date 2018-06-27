@@ -3,7 +3,7 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 27
     defaultConfig {
-        applicationId "com.github.matheuspiment.eir"
+        applicationId "br.ufg.inf.es.eir"
         minSdkVersion 19
         targetSdkVersion 27
         versionCode 1
@@ -37,4 +37,7 @@ dependencies {
 
     //Material Dialog
     implementation 'com.afollestad.material-dialogs:core:0.9.3.0'
+
+    //Web connection
+    implementation 'com.squareup.okhttp3:okhttp:3.6.0'
 }
