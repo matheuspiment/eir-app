@@ -47,7 +47,17 @@ public class WebRemedies extends WebConnection {
             for(int i=0; i < jsonArray.length();i++){
                 JSONObject jsonObject = jsonArray.getJSONObject(i);
                 Remedy remedy = new Remedy();
+
+                remedy.setId(jsonObject.getInt("id"));
                 remedy.setName(jsonObject.getString("name"));
+                remedy.setImage(jsonObject.getString("img"));
+                remedy.setCode(jsonObject.getInt("code"));
+
+                JSONObject remedyPresentation = jsonObject.getJSONObject("presentation");
+
+                remedy.setType(remedyPresentation.getString("type"));
+                remedy.setContent(remedyPresentation.getInt("content"));
+
                 remedies.add(remedy);
             }
             EventBus.getDefault().post(remedies);

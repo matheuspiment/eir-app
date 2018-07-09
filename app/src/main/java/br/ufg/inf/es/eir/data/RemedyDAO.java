@@ -24,6 +24,10 @@ public class RemedyDAO extends SQLiteOpenHelper {
     //COLUMN_NAMES
     private static final String ROW_ID = "id";
     private static final String ROW_NAME = "name";
+    private static final String ROW_IMAGE = "image";
+    private static final String ROW_TYPE = "type";
+    private static final String ROW_CONTENT = "content";
+    private static final String ROW_CODE = "code";
 
     public RemedyDAO(Context context) {
 
@@ -34,8 +38,12 @@ public class RemedyDAO extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
         String CREATE_CONTACTS_TABLE = "CREATE TABLE "
                 + TABLE_REMEDIES + "("
-                + ROW_ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
-                + ROW_NAME + " TEXT" + ")";
+                + ROW_ID + " INTEGER PRIMARY KEY,"
+                + ROW_NAME + " TEXT,"
+                + ROW_IMAGE + " TEXT, "
+                + ROW_TYPE + " TEXT, "
+                + ROW_CONTENT + " INTEGER, "
+                + ROW_CODE + " INTEGER" + ")";
         sqLiteDatabase.execSQL(CREATE_CONTACTS_TABLE);
     }
 
@@ -50,7 +58,12 @@ public class RemedyDAO extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
 
         ContentValues values = new ContentValues();
+        values.put(ROW_ID, remedy.getId());
         values.put(ROW_NAME, remedy.getName());
+        values.put(ROW_IMAGE, remedy.getImage());
+        values.put(ROW_TYPE, remedy.getType());
+        values.put(ROW_CONTENT, remedy.getContent());
+        values.put(ROW_CODE, remedy.getCode());
 
         db.insert(TABLE_REMEDIES, null, values);
         db.close();
@@ -71,6 +84,9 @@ public class RemedyDAO extends SQLiteOpenHelper {
                 remedy.setId(Integer.parseInt(cursor.getString(
                         0)));
                 remedy.setName(cursor.getString(1));
+                remedy.setImage(cursor.getString(2));
+                remedy.setType(cursor.getString(3));
+                remedy.setContent(Integer.parseInt(cursor.getString(4)));
                 // Adding contact to list
                 remedyList.add(remedy);
             } while (cursor.moveToNext());

@@ -13,6 +13,14 @@
         android:layout_marginRight="16dp"
         app:layoutManager="android.support.v7.widget.LinearLayoutManager"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        tools:listitem="@layout/fragment_item" />
+        tools:listitem="@layout/fragment_item"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/is_empity"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/remedies_empity"
+        android:gravity="center_horizontal|center_vertical"/>
 
 </RelativeLayout>

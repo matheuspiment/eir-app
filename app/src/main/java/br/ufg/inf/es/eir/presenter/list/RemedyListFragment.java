@@ -1,5 +1,6 @@
 package br.ufg.inf.es.eir.presenter.list;;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -7,18 +8,17 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
-import com.afollestad.materialdialogs.MaterialDialog;
+import android.widget.TextView;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
 
-import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
 import br.ufg.inf.es.eir.R;
+import br.ufg.inf.es.eir.RemedyPage;
 import br.ufg.inf.es.eir.data.RemedyDAO;
 import br.ufg.inf.es.eir.model.Remedy;
 import br.ufg.inf.es.eir.presenter.BaseFragment;
@@ -30,7 +30,7 @@ import br.ufg.inf.es.eir.web.WebRemedies;
 public class RemedyListFragment extends BaseFragment {
 
     private List<Remedy> remedyList;
-    private AdapterRemedy adapter;
+    private AdapterRemedyList adapter;
 
     public RemedyListFragment() {
 
@@ -41,9 +41,7 @@ public class RemedyListFragment extends BaseFragment {
                              Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_remedy_list, container, false);
-
         remedyList = new LinkedList<>();
-
         return view;
     }
 
@@ -52,8 +50,7 @@ public class RemedyListFragment extends BaseFragment {
         super.onStart();
         EventBus.getDefault().register(this);
         initRecycler();
-//        getRemedies();
-        tryRemedies();
+        updateRecycler();
     }
 
     @Override
@@ -65,31 +62,45 @@ public class RemedyListFragment extends BaseFragment {
     public void initRecycler(){
         RecyclerView recyclerView = (RecyclerView) getView().findViewById(R.id.remedy_list);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-        adapter = new AdapterRemedy(remedyList, getActivity());
+        adapter = new AdapterRemedyList(remedyList, getActivity());
         recyclerView.setAdapter(adapter);
     }
 
+    public void updateRecycler() {
+        showDialogWithMessage(getString(R.string.load_remedies));
 
-    public void getRemedies(){
-        List<Remedy> remedyList = new ArrayList<>();
+        List<Remedy> remedies = getRemediesFromDB();
 
-        for (int i = 1; i <= 10; i++) {
-            Remedy remedy = new Remedy();
-            remedy.setId(i);
-            remedy.setName("remedio" + i);
-            remedyList.add(remedy);
+        if (remedies.size() > 0) {
+            updateAdapterDataSet(remedies);
+            setupView();
         }
 
-        showDialogWithMessage(getString(R.string.load_remedies));
-        RemedyDAO dao = new RemedyDAO(getActivity());
-        adapter.setRemedies(remedyList);
-        adapter.notifyDataSetChanged();
+        tryRemediesFromWeb();
+
         dismissDialog();
     }
 
-    private void tryRemedies() {
-        WebRemedies webRemedies = new WebRemedies();
+    public void setupView() {
+        TextView text = (TextView) getView().findViewById(R.id.is_empity);
+        text.setVisibility(View.GONE);
 
+        RecyclerView recyclerView = (RecyclerView) getView().findViewById(R.id.remedy_list);
+        recyclerView.setVisibility(View.VISIBLE);
+    }
+
+    public void updateAdapterDataSet(List<Remedy> remedies) {
+        adapter.setRemedies(remedies);
+        adapter.notifyDataSetChanged();
+    }
+
+    public List<Remedy> getRemediesFromDB() {
+        RemedyDAO dao = new RemedyDAO(getActivity());
+        return dao.getAll();
+    }
+
+    private void tryRemediesFromWeb() {
+        WebRemedies webRemedies = new WebRemedies();
         webRemedies.call();
     }
 
@@ -102,25 +113,46 @@ public class RemedyListFragment extends BaseFragment {
     @Subscribe(threadMode = ThreadMode.MAIN)
     public void onMessageEvent(List<Remedy> remedies) {
         dismissDialog();
-        adapter.setRemedies(remedies);
-        adapter.notifyDataSetChanged();
+
+        updateRemediesDB(remedies);
+
+        updateAdapterDataSet(getRemediesFromDB());
+        setupView();
     }
 
     @Subscribe(threadMode = ThreadMode.MAIN)
     public void onMessageEvent(Remedy remedy) {
-        RemedyDAO dao = new RemedyDAO(getActivity());
-        adapter.setRemedies(dao.getAll());
-        adapter.notifyDataSetChanged();
+        Intent intent = new Intent(getContext(), RemedyPage.class);
+//        intent.putExtra("remedy", (Serializable) remedy);
+
+        EventBus.getDefault().unregister(this);
+        EventBus.getDefault().postSticky(remedy);
+
+        startActivity(intent);
+//        RemedyDAO dao = new RemedyDAO(getActivity());
+//        adapter.setRemedies(dao.getAll());
+//        adapter.notifyDataSetChanged();
     }
 
-    public void add(){
-        Remedy remedy = new Remedy();
-        remedy.setName("NEW");
+    public void updateRemediesDB(List<Remedy> remedies) {
         RemedyDAO dao = new RemedyDAO(getActivity());
-        dao.create(remedy);
+//        List<Remedy> remediesFromAdapter = adapter.getRemedies();
 
-        adapter.setRemedies(dao.getAll());
-        adapter.notifyDataSetChanged();
+        for (int i = 0; i < remedies.size(); i++) {
+//            boolean hasElement;
+            Remedy remedy = remedies.get(i);
+//
+//            hasElement = false;
+//            for (Remedy remedyAdapter: remediesFromAdapter) {
+//                if (remedy.getCode() == remedyAdapter.getCode()) {
+//                    hasElement = true;
+//                }
+//            }
+//
+//            if (hasElement == false) {
+                dao.create(remedy);
+//            }
+        }
     }
 
 }

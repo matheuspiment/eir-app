@@ -2,8 +2,11 @@ package br.ufg.inf.es.eir.presenter;
 
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
+import android.view.View;
 
 import com.afollestad.materialdialogs.MaterialDialog;
+
+import br.ufg.inf.es.eir.R;
 
 /**
  * Created by marceloquinta on 10/02/17.
@@ -27,7 +30,8 @@ public class BaseFragment extends Fragment {
     }
 
     public void showAlert(String message){
-        Snackbar.make(getView().findViewById(android.R.id.content),message, Snackbar.LENGTH_LONG).show();
+        View target = getView().findViewById(R.id.content);
+        Snackbar.make(target,message, Snackbar.LENGTH_LONG).show();
     }
 
 }

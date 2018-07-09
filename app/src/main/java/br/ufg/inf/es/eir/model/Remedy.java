@@ -1,10 +1,12 @@
 package br.ufg.inf.es.eir.model;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class Remedy {
+public class Remedy implements Serializable {
     private int id;
     private String name;
+    private String image;
     private List composition;
     private String type;
     private int content;
@@ -25,6 +27,14 @@ public class Remedy {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 
     public List getComposition() {
