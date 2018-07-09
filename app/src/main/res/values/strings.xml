@@ -4,4 +4,10 @@
     <string name="section_format">Hello World from section: %1$d</string>
     <string name="load_remedies">Recuperando remédios</string>
     <string name="remedies_empity">Nenhum medicamento encontrado</string>
+    <string name="code">Código: </string>
+    <string name="information">Informações do produto</string>
+    <string name="pharmacies">Fármácias:</string>
+    <string name="download_remedies">Baixar Bula</string>
+    <string name="indication">Indicação </string>
+
 </resources>

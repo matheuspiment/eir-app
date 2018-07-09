@@ -30,7 +30,9 @@ public class RemedyPage extends AppCompatActivity {
     public void setupView(Remedy remedy) {
         setTitle(remedy.getName());
 
-        TextView name = (TextView) findViewById(R.id.name);
+        TextView name = (TextView) findViewById(R.id.name_remedy);
         name.setText(remedy.getName());
+
+
     }
 }
