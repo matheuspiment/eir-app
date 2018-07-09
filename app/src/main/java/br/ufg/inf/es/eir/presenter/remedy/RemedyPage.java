@@ -1,4 +1,4 @@
-package br.ufg.inf.es.eir;
+package br.ufg.inf.es.eir.presenter.remedy;
 
 import android.app.ActionBar;
 import android.content.Intent;
@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import org.greenrobot.eventbus.EventBus;
 
+import br.ufg.inf.es.eir.R;
 import br.ufg.inf.es.eir.model.Remedy;
 
 public class RemedyPage extends AppCompatActivity {

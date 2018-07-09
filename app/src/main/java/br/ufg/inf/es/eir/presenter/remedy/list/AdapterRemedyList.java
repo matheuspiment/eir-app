@@ -1,7 +1,6 @@
-package br.ufg.inf.es.eir.presenter.list;
+package br.ufg.inf.es.eir.presenter.remedy.list;
 
 import android.content.Context;
-import android.net.Uri;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -23,7 +22,7 @@ public class AdapterRemedyList extends RecyclerView.Adapter<AdapterRemedyList.Re
     private List<Remedy> remedies;
     private Context context;
 
-    public AdapterRemedyList(List<Remedy> remedies, Context context){
+    public AdapterRemedyList(List<Remedy> remedies, Context context) {
         this.remedies = remedies;
         this.context = context;
     }
@@ -38,14 +37,18 @@ public class AdapterRemedyList extends RecyclerView.Adapter<AdapterRemedyList.Re
     @Override
     public void onBindViewHolder(RemedyViewHolder holder, int position) {
         final Remedy remedy = remedies.get(position);
+
         holder.nameView.setText(remedy.getName());
+
         Picasso.get().load(remedy.getImage()).into(holder.imageView);
+
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 EventBus.getDefault().post(remedy);
             }
         });
+
         holder.descriptionView.setText(remedy.getType());
     }
 
@@ -69,9 +72,9 @@ public class AdapterRemedyList extends RecyclerView.Adapter<AdapterRemedyList.Re
 
         RemedyViewHolder(View itemView) {
             super(itemView);
-            imageView = (ImageView)itemView.findViewById(R.id.item_image);
-            nameView = (TextView)itemView.findViewById(R.id.item_name);
-            descriptionView = (TextView)itemView.findViewById(R.id.item_description);
+            imageView = (ImageView) itemView.findViewById(R.id.item_image);
+            nameView = (TextView) itemView.findViewById(R.id.item_name);
+            descriptionView = (TextView) itemView.findViewById(R.id.item_description);
         }
     }
 }
