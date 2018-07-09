@@ -11,35 +11,52 @@
         android:id="@+id/name_remedy"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="name_medicine"
+        android:text=""
         android:layout_margin="10dp"
         />
 
     <TextView
-        android:id="@+id/amount_remedy"
+        android:id="@+id/type_remedy"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="amount_medicine"
+        android:text=""
         android:layout_below="@+id/name_remedy"
+        android:layout_marginLeft="10dp"
+        />
+
+    <TextView
+        android:id="@+id/content_remedy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:layout_below="@+id/type_remedy"
         android:layout_margin="10dp"
         />
 
     <TextView
-        android:id="@+id/units_remedy"
+        android:id="@+id/lab_remedy"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="units_medicine"
-        android:layout_below="@+id/amount_remedy"
-        android:layout_margin="10dp"
-        />
+        android:text=""
+        android:layout_below="@+id/content_remedy"
+        android:layout_marginLeft="10dp"/>
+
+    <TextView
+        android:id="@+id/code_text_remedy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/code"
+        android:layout_below="@+id/lab_remedy"
+        android:layout_margin="10dp"/>
 
     <TextView
         android:id="@+id/code_remedy"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/code"
-        android:layout_below="@+id/units_remedy"
-        android:layout_margin="10dp"/>
+        android:text=""
+        android:layout_below="@+id/code_text_remedy"
+        android:layout_marginLeft="10dp"/>
+
 
     <ImageView
         android:id="@+id/img_remedy"
@@ -59,19 +76,19 @@
         android:layout_margin="10dp"/>
 
     <TextView
-        android:id="@+id/indication"
+        android:id="@+id/composition"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/indication"
+        android:text="@string/composition"
         android:layout_below="@+id/information_remedy"
         android:layout_margin="10dp"/>
 
     <TextView
-        android:id="@+id/indication_remedy"
+        android:id="@+id/composition_remedy"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="indication_remedy"
-        android:layout_below="@+id/indication"
+        android:text=""
+        android:layout_below="@+id/composition"
         android:layout_margin="10dp"/>
 
     <Button
@@ -79,7 +96,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/download_remedies"
-        android:layout_below="@+id/indication_remedy"
+        android:layout_below="@+id/composition_remedy"
         android:layout_alignParentEnd="true"
         android:layout_margin="10dp"/>
 
@@ -95,7 +112,7 @@
         android:id="@+id/pharmacies_phone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="pharmacies_phone"
+        android:text=""
         android:layout_below="@+id/pharmacies"
         android:layout_margin="10dp"/>
 
