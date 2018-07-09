@@ -89,6 +89,8 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
 
         remedyListFragment.updateAdapterDataSet(newRemedies);
 
+        remedyListFragment.setupView();
+
         return true;
     }
 }

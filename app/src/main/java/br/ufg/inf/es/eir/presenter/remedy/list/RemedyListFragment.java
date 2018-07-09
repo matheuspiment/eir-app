@@ -71,10 +71,7 @@ public class RemedyListFragment extends BaseFragment {
 
         remedyList = getRemediesFromDB();
 
-        if (remedyList.size() > 0) {
-            updateAdapterDataSet(remedyList);
-            setupView();
-        }
+        setupView();
 
         tryRemediesFromWeb();
 
@@ -82,11 +79,22 @@ public class RemedyListFragment extends BaseFragment {
     }
 
     public void setupView() {
-        TextView text = (TextView) getView().findViewById(R.id.is_empity);
-        text.setVisibility(View.GONE);
+        if (adapter.getRemedies().size() > 0) {
+            TextView text = (TextView) getView().findViewById(R.id.is_empty);
+            text.setVisibility(View.GONE);
 
-        RecyclerView recyclerView = (RecyclerView) getView().findViewById(R.id.remedy_list);
-        recyclerView.setVisibility(View.VISIBLE);
+            RecyclerView recyclerView = (RecyclerView) getView().findViewById(R.id.remedy_list);
+            recyclerView.setVisibility(View.VISIBLE);
+        } else {
+            TextView text = (TextView) getView().findViewById(R.id.is_empty);
+            text.setVisibility(View.VISIBLE);
+
+            RecyclerView recyclerView = (RecyclerView) getView().findViewById(R.id.remedy_list);
+            recyclerView.setVisibility(View.GONE);
+        }
+
+
+
     }
 
     public void updateAdapterDataSet(List<Remedy> remedies) {
@@ -117,6 +125,7 @@ public class RemedyListFragment extends BaseFragment {
         updateRemediesDB(remedies);
 
         updateAdapterDataSet(getRemediesFromDB());
+
         setupView();
     }
 
