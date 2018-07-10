@@ -27,7 +27,7 @@ public class UnitPage extends AppCompatActivity {
     public void setupView(Remedy remedy) {
         setTitle(remedy.getName());
 
-        TextView name = (TextView) findViewById(R.id.name);
-        name.setText(remedy.getName());
+//        TextView name = (TextView) findViewById(R.id.name);
+//        name.setText(remedy.getName());
     }
 }

@@ -51,12 +51,14 @@ public class WebRemedies extends WebConnection {
                 remedy.setId(jsonObject.getInt("id"));
                 remedy.setName(jsonObject.getString("name"));
                 remedy.setImage(jsonObject.getString("img"));
-                remedy.setCode(jsonObject.getInt("code"));
 
                 JSONObject remedyPresentation = jsonObject.getJSONObject("presentation");
 
                 remedy.setType(remedyPresentation.getString("type"));
                 remedy.setContent(remedyPresentation.getInt("content"));
+
+                remedy.setLab(jsonObject.getString("lab"));
+                remedy.setCode(jsonObject.getInt("code"));
 
                 remedies.add(remedy);
             }
