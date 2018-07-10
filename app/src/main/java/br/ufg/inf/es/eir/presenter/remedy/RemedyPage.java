@@ -48,8 +48,8 @@ public class RemedyPage extends AppCompatActivity {
         code.setText(remedy.getCode());
 
         ImageView img = (ImageView) findViewById(R.id.img_remedy);
-        //img.setImageBitmap(remedy.getImage());      app:srcCompat="@mipmap/ic_launcher"
-        //img.setImageURI(remedy.getImage ());
+//        img.setImageBitmap(remedy.getImage());
+//        img.setImageURI(remedy.getImage ());
 
         TextView composition = (TextView) findViewById(R.id.composition_remedy);
         composition.setText(String.valueOf(remedy.getComposition()));
