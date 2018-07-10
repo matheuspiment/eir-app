@@ -18,9 +18,9 @@ public class PharmacyPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pharmacy_page);
 
-//        Intent i = getIntent();
-//        Pharmacy pharmacy = (Pharmacy) i.getSerializableExtra("pharmacy");
-//        setupView(pharmacy);
+        Intent i = getIntent();
+        Pharmacy pharmacy = (Pharmacy) i.getSerializableExtra("pharmacy");
+        setupView(pharmacy);
 
         Pharmacy pharmacy = EventBus.getDefault().removeStickyEvent(pharmacy.class);
         setupView(pharmacy);
