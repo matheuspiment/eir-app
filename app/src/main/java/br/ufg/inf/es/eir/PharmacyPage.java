@@ -41,6 +41,33 @@ public class PharmacyPage extends AppCompatActivity {
 
         TextView street = (TextView) findViewById(R.id.street_pharmacy);
         street.setText(pharmacy.getStreet());
+        
+        TextView number = (TextView) findViewById(R.id.number_pharmacy);
+        number.setText(pharmacy.getNumber());
+        
+        TextView complement = (TextView) findViewById(R.id.complement_pharmacy);
+        complement.setText(pharmacy.getComplement());
+        
+        TextView region = (TextView) findViewById(R.id.region_pharmacy);
+        region.setText(pharmacy.getRegion());
+        
+        TextView zipcode = (TextView) findViewById(R.id.zipcode_pharmacy);
+        zipcode.setText(pharmacy.getZipcode());
+        
+        TextView city = (TextView) findViewById(R.id.city_pharmacy);
+        city.setText(pharmacy.getCity());
+        
+        TextView state = (TextView) findViewById(R.id.state_pharmacy);
+        state.setText(pharmacy.getState());
+        
+        TextView country = (TextView) findViewById(R.id.country_pharmacy);
+        country.setText(pharmacy.getCountry());
+        
+        TextView lat = (TextView) findViewById(R.id.lat_pharmacy);
+        lat.setText(pharmacy.getLat());
+        
+        TextView lgn = (TextView) findViewById(R.id.lgn_pharmacy);
+        lgn.setText(pharmacy.getLgn());
 
     }
 }
