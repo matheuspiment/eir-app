@@ -69,11 +69,15 @@ public class RemedyListFragment extends BaseFragment {
     public void updateRecycler() {
         showDialogWithMessage(getString(R.string.load_remedies));
 
-        remedyList = getRemediesFromDB();
+        List<Remedy> remediesFromDB = getRemediesFromDB();
 
-        setupView();
+        remedyList = remediesFromDB;
+
+        updateAdapterDataSet(remediesFromDB);
 
         tryRemediesFromWeb();
+
+        setupView();
 
         dismissDialog();
     }

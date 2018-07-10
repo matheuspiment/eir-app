@@ -9,6 +9,8 @@ import android.support.v7.widget.Toolbar;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.squareup.picasso.Picasso;
+
 import org.greenrobot.eventbus.EventBus;
 
 import br.ufg.inf.es.eir.R;
@@ -35,24 +37,29 @@ public class RemedyPage extends AppCompatActivity {
         TextView name = (TextView) findViewById(R.id.name_remedy);
         name.setText(remedy.getName());
 
-        TextView amount = (TextView) findViewById(R.id.type_remedy);
-        amount.setText(remedy.getType());
+        TextView type = (TextView) findViewById(R.id.type_remedy);
+        type.setText(remedy.getType());
 
         TextView content = (TextView) findViewById(R.id.content_remedy);
-        content.setText(remedy.getContent());
+        content.setText(Integer.toString(remedy.getContent()));
 
         TextView lab = (TextView) findViewById(R.id.lab_remedy);
         lab.setText(remedy.getLab());
 
         TextView code = (TextView) findViewById(R.id.code_remedy);
-        code.setText(remedy.getCode());
+        code.setText(Integer.toString(remedy.getCode()));
 
         ImageView img = (ImageView) findViewById(R.id.img_remedy);
+<<<<<<< HEAD
 //        img.setImageBitmap(remedy.getImage());
 //        img.setImageURI(remedy.getImage ());
+=======
+        Picasso.get().load(remedy.getImage()).into(img);
+>>>>>>> 5b4e7e3acf81687c3ff18f20564468077880cb26
 
-        TextView composition = (TextView) findViewById(R.id.composition_remedy);
-        composition.setText(String.valueOf(remedy.getComposition()));
+//
+//        TextView composition = (TextView) findViewById(R.id.composition_remedy);
+//        composition.setText(String.valueOf(remedy.getComposition()));
 
     }
 }

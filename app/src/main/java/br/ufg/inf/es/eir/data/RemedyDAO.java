@@ -27,6 +27,7 @@ public class RemedyDAO extends SQLiteOpenHelper {
     private static final String ROW_IMAGE = "image";
     private static final String ROW_TYPE = "type";
     private static final String ROW_CONTENT = "content";
+    private static final String ROW_LAB = "lab";
     private static final String ROW_CODE = "code";
 
     public RemedyDAO(Context context) {
@@ -43,6 +44,7 @@ public class RemedyDAO extends SQLiteOpenHelper {
                 + ROW_IMAGE + " TEXT, "
                 + ROW_TYPE + " TEXT, "
                 + ROW_CONTENT + " INTEGER, "
+                + ROW_LAB + " TEXT, "
                 + ROW_CODE + " INTEGER" + ")";
         sqLiteDatabase.execSQL(CREATE_CONTACTS_TABLE);
     }
@@ -63,6 +65,7 @@ public class RemedyDAO extends SQLiteOpenHelper {
         values.put(ROW_IMAGE, remedy.getImage());
         values.put(ROW_TYPE, remedy.getType());
         values.put(ROW_CONTENT, remedy.getContent());
+        values.put(ROW_LAB, remedy.getLab());
         values.put(ROW_CODE, remedy.getCode());
 
         db.insert(TABLE_REMEDIES, null, values);
@@ -87,6 +90,9 @@ public class RemedyDAO extends SQLiteOpenHelper {
                 remedy.setImage(cursor.getString(2));
                 remedy.setType(cursor.getString(3));
                 remedy.setContent(Integer.parseInt(cursor.getString(4)));
+                remedy.setLab(cursor.getString(5));
+                remedy.setCode(Integer.parseInt(cursor.getString(6)));
+
                 // Adding contact to list
                 remedyList.add(remedy);
             } while (cursor.moveToNext());

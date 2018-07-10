@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".presenter.MainActivity"
+            android:name="br.ufg.inf.es.eir.presenter.MainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -21,10 +21,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+<<<<<<< HEAD
         <activity
             android:name=".presenter.remedy.RemedyPage"
             android:parentActivityName=".presenter.MainActivity"></activity>
         <activity android:name=".PharmacyPage"></activity>
+=======
+        <activity android:name="br.ufg.inf.es.eir.presenter.remedy.RemedyPage"
+            android:parentActivityName=".presenter.MainActivity">
+        </activity>
+>>>>>>> 5b4e7e3acf81687c3ff18f20564468077880cb26
     </application>
 
 </manifest>
