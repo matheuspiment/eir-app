@@ -8,6 +8,7 @@ import org.greenrobot.eventbus.EventBus;
 
 import br.ufg.inf.es.eir.R;
 import br.ufg.inf.es.eir.model.Remedy;
+import br.ufg.inf.es.eir.model.Unit;
 
 public class UnitPage extends AppCompatActivity {
     @Override
@@ -19,13 +20,13 @@ public class UnitPage extends AppCompatActivity {
 //        Remedy remedy = (Remedy) i.getSerializableExtra("remedy");
 //        setupView(remedy);
 
-        Remedy remedy = EventBus.getDefault().removeStickyEvent(Remedy.class);
-        setupView(remedy);
+        Unit unit = EventBus.getDefault().removeStickyEvent(Unit.class);
+        setupView(unit);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
-    public void setupView(Remedy remedy) {
-        setTitle(remedy.getName());
+    public void setupView(Unit unit) {
+        setTitle(unit.getName());
 
 //        TextView name = (TextView) findViewById(R.id.name);
 //        name.setText(remedy.getName());

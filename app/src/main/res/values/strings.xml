@@ -9,4 +9,5 @@
     <string name="pharmacies">Fármácias:</string>
     <string name="download_remedies">Baixar Bula</string>
     <string name="composition">Composição </string>
+    <string name="units_empty">Nenhuma unidade encontrada</string>
 </resources>

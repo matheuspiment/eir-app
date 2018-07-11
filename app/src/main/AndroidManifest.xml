@@ -24,6 +24,9 @@
         <activity android:name="br.ufg.inf.es.eir.presenter.remedy.RemedyPage"
             android:parentActivityName=".presenter.MainActivity">
         </activity>
+        <activity android:name="br.ufg.inf.es.eir.presenter.unit.UnitPage"
+            android:parentActivityName=".presenter.MainActivity">
+        </activity>
     </application>
 
 </manifest>

@@ -29,6 +29,7 @@ public class RemedyDAO extends SQLiteOpenHelper {
     private static final String ROW_CONTENT = "content";
     private static final String ROW_LAB = "lab";
     private static final String ROW_CODE = "code";
+    private static final String ROW_UNITS = "units";
 
     public RemedyDAO(Context context) {
 
@@ -45,7 +46,8 @@ public class RemedyDAO extends SQLiteOpenHelper {
                 + ROW_TYPE + " TEXT, "
                 + ROW_CONTENT + " INTEGER, "
                 + ROW_LAB + " TEXT, "
-                + ROW_CODE + " INTEGER" + ")";
+                + ROW_CODE + " INTEGER, "
+                + ROW_UNITS + " TEXT" + ")";
         sqLiteDatabase.execSQL(CREATE_CONTACTS_TABLE);
     }
 
@@ -67,6 +69,19 @@ public class RemedyDAO extends SQLiteOpenHelper {
         values.put(ROW_CONTENT, remedy.getContent());
         values.put(ROW_LAB, remedy.getLab());
         values.put(ROW_CODE, remedy.getCode());
+
+        ArrayList units = (ArrayList) remedy.getUnits();
+        String unitsAsString = "";
+
+        for (int i = 0; i < units.size(); i++) {
+            if (i == units.size() - 1) {
+                unitsAsString = unitsAsString.concat(units.get(i).toString());
+            } else {
+                unitsAsString = unitsAsString.concat(units.get(i).toString() + ";");
+            }
+        }
+
+        values.put(ROW_UNITS, unitsAsString);
 
         db.insert(TABLE_REMEDIES, null, values);
         db.close();
@@ -92,6 +107,16 @@ public class RemedyDAO extends SQLiteOpenHelper {
                 remedy.setContent(Integer.parseInt(cursor.getString(4)));
                 remedy.setLab(cursor.getString(5));
                 remedy.setCode(Integer.parseInt(cursor.getString(6)));
+
+                String unitsAsString = cursor.getString(7);
+                String[] unitsStringArray = unitsAsString.split(";");
+                ArrayList units = new ArrayList();
+
+                for (String unitId: unitsStringArray) {
+                    units.add(Integer.parseInt(unitId));
+                }
+
+                remedy.setUnits(units);
 
                 // Adding contact to list
                 remedyList.add(remedy);

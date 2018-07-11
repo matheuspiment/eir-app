@@ -44,6 +44,10 @@ public class WebRemedies extends WebConnection {
             responseBody = response.body().string();
 
             JSONArray jsonArray = new JSONArray(responseBody);
+            JSONObject remedyPresentation;
+            JSONArray unitsFromJSON;
+            ArrayList units;
+
             for(int i=0; i < jsonArray.length();i++){
                 JSONObject jsonObject = jsonArray.getJSONObject(i);
                 Remedy remedy = new Remedy();
@@ -52,13 +56,22 @@ public class WebRemedies extends WebConnection {
                 remedy.setName(jsonObject.getString("name"));
                 remedy.setImage(jsonObject.getString("img"));
 
-                JSONObject remedyPresentation = jsonObject.getJSONObject("presentation");
-
+                remedyPresentation = jsonObject.getJSONObject("presentation");
                 remedy.setType(remedyPresentation.getString("type"));
                 remedy.setContent(remedyPresentation.getInt("content"));
 
                 remedy.setLab(jsonObject.getString("lab"));
                 remedy.setCode(jsonObject.getInt("code"));
+
+                unitsFromJSON = new JSONArray(jsonObject.getJSONArray("units").toString());
+                units = new ArrayList();
+
+                for (int j = 0; j < unitsFromJSON.length(); j++) {
+                    JSONObject unitJSONObject = unitsFromJSON.getJSONObject(j);
+                    units.add(unitJSONObject.getInt("id"));
+                }
+
+                remedy.setUnits(units);
 
                 remedies.add(remedy);
             }

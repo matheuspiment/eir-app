@@ -1,11 +1,8 @@
 package br.ufg.inf.es.eir.presenter.remedy;
 
-import android.app.ActionBar;
-import android.content.Intent;
-import android.support.v4.content.ContextCompat;
+
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -52,7 +49,7 @@ public class RemedyPage extends AppCompatActivity {
         ImageView img = (ImageView) findViewById(R.id.img_remedy);
         Picasso.get().load(remedy.getImage()).into(img);
 
-//
+
 //        TextView composition = (TextView) findViewById(R.id.composition_remedy);
 //        composition.setText(String.valueOf(remedy.getComposition()));
 

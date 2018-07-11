@@ -14,6 +14,7 @@ import java.util.List;
 
 import br.ufg.inf.es.eir.R;
 import br.ufg.inf.es.eir.model.Remedy;
+import br.ufg.inf.es.eir.model.Unit;
 import br.ufg.inf.es.eir.presenter.remedy.list.RemedyListFragment;
 import br.ufg.inf.es.eir.presenter.unit.list.UnitListFragment;
 
@@ -77,19 +78,31 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
     @Override
     public boolean onQueryTextChange(String newText) {
         String userInput = newText.toLowerCase();
+
         List<Remedy> newRemedies = new ArrayList<>();
+        List<Unit> newUnits = new ArrayList<>();
 
         List<Remedy> remedies = remedyListFragment.getRemedyList();
-
+        List<Unit> units = unitListFragment.getUnitList();
+        
         for (Remedy remedy : remedies) {
             if (remedy.getName().toLowerCase().contains(userInput)) {
                 newRemedies.add(remedy);
             }
         }
 
+        for (Unit unit : units) {
+            if (unit.getName().toLowerCase().contains(userInput) ||
+                    unit.getCity().toLowerCase().contains(userInput)) {
+                newUnits.add(unit);
+            }
+        }
+
         remedyListFragment.updateAdapterDataSet(newRemedies);
+        unitListFragment.updateAdapterDataSet(newUnits);
 
         remedyListFragment.setupView();
+        unitListFragment.setupView();
 
         return true;
     }

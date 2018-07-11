@@ -12,6 +12,7 @@ public class Remedy implements Serializable {
     private int content;
     private String lab;
     private int code;
+    private List units;
 
     public int getId() {
         return id;
@@ -75,5 +76,13 @@ public class Remedy implements Serializable {
 
     public void setCode(int code) {
         this.code = code;
+    }
+
+    public List getUnits() {
+        return units;
+    }
+
+    public void setUnits(List units) {
+        this.units = units;
     }
 }
