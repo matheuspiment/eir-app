@@ -2,6 +2,7 @@ package br.ufg.inf.es.eir.presenter.unit;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import org.greenrobot.eventbus.EventBus;
@@ -14,7 +15,7 @@ public class UnitPage extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_remedy_page);
+        setContentView(R.layout.activity_unit_page);
 
 //        Intent i = getIntent();
 //        Remedy remedy = (Remedy) i.getSerializableExtra("remedy");
@@ -28,7 +29,38 @@ public class UnitPage extends AppCompatActivity {
     public void setupView(Unit unit) {
         setTitle(unit.getName());
 
-//        TextView name = (TextView) findViewById(R.id.name);
-//        name.setText(remedy.getName());
+        TextView name = (TextView) findViewById(R.id.name_pharmacy);
+        name.setText(unit.getName());
+
+        TextView phone = (TextView) findViewById(R.id.phone_pharmacy);
+        phone.setText(unit.getPhone());
+
+        ImageView img = (ImageView) findViewById(R.id.img_pharmacy);
+//        img.setImageURI(pharmacy.getImage ());
+
+        TextView street = (TextView) findViewById(R.id.street_pharmacy);
+        street.setText(unit.getStreet());
+
+        TextView number = (TextView) findViewById(R.id.number_pharmacy);
+        number.setText(Integer.toString(unit.getNumber()));
+
+        TextView complement = (TextView) findViewById(R.id.complement_pharmacy);
+        complement.setText(unit.getComplement());
+
+        TextView region = (TextView) findViewById(R.id.region_pharmacy);
+        region.setText(unit.getRegion());
+
+        TextView zipcode = (TextView) findViewById(R.id.zipcode_pharmacy);
+        zipcode.setText(unit.getZipcode());
+
+        TextView city = (TextView) findViewById(R.id.city_pharmacy);
+        city.setText(unit.getCity());
+
+        TextView state = (TextView) findViewById(R.id.state_pharmacy);
+        state.setText(unit.getState());
+
+        TextView country = (TextView) findViewById(R.id.country_pharmacy);
+        country.setText(unit.getCountry());
+
     }
 }

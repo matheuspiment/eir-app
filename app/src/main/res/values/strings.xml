@@ -10,4 +10,12 @@
     <string name="download_remedies">Baixar Bula</string>
     <string name="composition">Composição </string>
     <string name="units_empty">Nenhuma unidade encontrada</string>
+    <string name="street">Rua:</string>
+    <string name="nember">Número:</string>
+    <string name="complement">Complemento:</string>
+    <string name="region">Setor:</string>
+    <string name="zipcode">Código postal:</string>
+    <string name="city">Cidade:</string>
+    <string name="state">Estado:</string>
+    <string name="country">País:</string>
 </resources>

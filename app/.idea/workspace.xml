@@ -12,16 +12,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c3388fbd-8d24-4277-951e-ce7622781d47" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/src/main/AndroidManifest.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/ufg/inf/es/eir/data/RemedyDAO.java" afterPath="$PROJECT_DIR$/src/main/java/br/ufg/inf/es/eir/data/RemedyDAO.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/ufg/inf/es/eir/model/Remedy.java" afterPath="$PROJECT_DIR$/src/main/java/br/ufg/inf/es/eir/model/Remedy.java" />
+      <change beforePath="$PROJECT_DIR$/../LICENSE" afterPath="$PROJECT_DIR$/../LICENSE" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/ufg/inf/es/eir/presenter/MainActivity.java" afterPath="$PROJECT_DIR$/src/main/java/br/ufg/inf/es/eir/presenter/MainActivity.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/ufg/inf/es/eir/presenter/remedy/RemedyPage.java" afterPath="$PROJECT_DIR$/src/main/java/br/ufg/inf/es/eir/presenter/remedy/RemedyPage.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/ufg/inf/es/eir/presenter/remedy/list/AdapterRemedyList.java" afterPath="$PROJECT_DIR$/src/main/java/br/ufg/inf/es/eir/presenter/remedy/list/AdapterRemedyList.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/ufg/inf/es/eir/presenter/unit/UnitPage.java" afterPath="$PROJECT_DIR$/src/main/java/br/ufg/inf/es/eir/presenter/unit/UnitPage.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/ufg/inf/es/eir/presenter/unit/list/UnitListFragment.java" afterPath="$PROJECT_DIR$/src/main/java/br/ufg/inf/es/eir/presenter/unit/list/UnitListFragment.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/ufg/inf/es/eir/web/WebRemedies.java" afterPath="$PROJECT_DIR$/src/main/java/br/ufg/inf/es/eir/web/WebRemedies.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/layout/fragment_unit_list.xml" afterPath="$PROJECT_DIR$/src/main/res/layout/fragment_unit_list.xml" />
       <change beforePath="$PROJECT_DIR$/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/src/main/res/values/strings.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/build/classes/" />
@@ -72,7 +68,7 @@
       <file leaf-file-name="Remedy.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/br/ufg/inf/es/eir/model/Remedy.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-604">
+            <state relative-caret-position="-412">
               <caret line="5" column="43" lean-forward="false" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -81,21 +77,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AdapterUnitList.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/br/ufg/inf/es/eir/presenter/unit/list/AdapterUnitList.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="26" column="22" lean-forward="false" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="UnitPage.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/br/ufg/inf/es/eir/presenter/unit/UnitPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="22" column="57" lean-forward="false" selection-start-line="22" selection-start-column="48" selection-end-line="22" selection-end-column="57" />
+            <state relative-caret-position="108">
+              <caret line="15" column="55" lean-forward="false" selection-start-line="15" selection-start-column="55" selection-end-line="15" selection-end-column="55" />
               <folding />
             </state>
           </provider>
@@ -114,21 +100,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BaseFragment.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/br/ufg/inf/es/eir/presenter/BaseFragment.java">
+      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/br/ufg/inf/es/eir/presenter/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+            <state relative-caret-position="270">
+              <caret line="40" column="25" lean-forward="false" selection-start-line="40" selection-start-column="25" selection-end-line="40" selection-end-column="25" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/br/ufg/inf/es/eir/presenter/MainActivity.java">
+      <file leaf-file-name="RemedyPage.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/br/ufg/inf/es/eir/presenter/remedy/RemedyPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1062">
-              <caret line="86" column="8" lean-forward="false" selection-start-line="86" selection-start-column="8" selection-end-line="86" selection-end-column="8" />
+            <state relative-caret-position="144">
+              <caret line="50" column="56" lean-forward="false" selection-start-line="50" selection-start-column="56" selection-end-line="50" selection-end-column="56" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/build.gradle">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="470">
+              <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -137,7 +133,7 @@
       <file leaf-file-name="Unit.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/br/ufg/inf/es/eir/model/Unit.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1854">
+            <state relative-caret-position="90">
               <caret line="5" column="41" lean-forward="false" selection-start-line="5" selection-start-column="41" selection-end-line="5" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -193,18 +189,6 @@
                 <element signature="e#2195#2196#0" expanded="true" />
                 <element signature="e#2241#2242#0" expanded="true" />
                 <element signature="e#2281#2282#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RemedyPage.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/br/ufg/inf/es/eir/presenter/remedy/RemedyPage.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="31" column="35" lean-forward="false" selection-start-line="31" selection-start-column="35" selection-end-line="31" selection-end-column="35" />
-              <folding>
-                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -2234,11 +2218,6 @@
     <option name="externalProjectsViewState">
       <projects_view />
     </option>
-    <option name="projectSyncType">
-      <map>
-        <entry key="$PROJECT_DIR$" value="RE_IMPORT" />
-      </map>
-    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -2252,11 +2231,12 @@
         <option value="$PROJECT_DIR$/src/main/java/br/ufg/inf/es/eir/presenter/unit/list/AdapterUnitList.java" />
         <option value="$PROJECT_DIR$/src/main/res/layout/fragment_unit_list.xml" />
         <option value="$PROJECT_DIR$/src/main/java/br/ufg/inf/es/eir/data/UnitDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/ufg/inf/es/eir/presenter/unit/UnitPage.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/ufg/inf/es/eir/presenter/unit/list/UnitListFragment.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/ufg/inf/es/eir/presenter/remedy/RemedyPage.java" />
         <option value="$PROJECT_DIR$/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/src/main/java/br/ufg/inf/es/eir/presenter/MainActivity.java" />
+        <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$PROJECT_DIR$/src/main/java/br/ufg/inf/es/eir/presenter/unit/UnitPage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/ufg/inf/es/eir/presenter/remedy/RemedyPage.java" />
       </list>
     </option>
   </component>
@@ -2290,95 +2270,6 @@
             <path>
               <item name="app" type="1abcf292:AndroidViewProjectNode" />
               <item name="app" type="feadf853:AndroidModuleNode" />
-            </path>
-            <path>
-              <item name="app" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="manifests" type="f94875db:AndroidManifestsGroupNode" />
-            </path>
-            <path>
-              <item name="app" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-            </path>
-            <path>
-              <item name="app" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="eir" type="cbb59c9e:AndroidPsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="app" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="eir" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="app" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="eir" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="app" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="eir" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="presenter" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="app" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="eir" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="presenter" type="462c0819:PsiDirectoryNode" />
-              <item name="remedy" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="app" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="eir" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="presenter" type="462c0819:PsiDirectoryNode" />
-              <item name="remedy" type="462c0819:PsiDirectoryNode" />
-              <item name="list" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="app" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="eir" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="presenter" type="462c0819:PsiDirectoryNode" />
-              <item name="unit" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="app" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="eir" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="presenter" type="462c0819:PsiDirectoryNode" />
-              <item name="unit" type="462c0819:PsiDirectoryNode" />
-              <item name="list" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="app" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="eir" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="app" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
-            </path>
-            <path>
-              <item name="app" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
-              <item name="layout" type="ddeffd01:AndroidResFolderTypeNode" />
             </path>
           </expand>
           <select />
@@ -2565,7 +2456,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1299" height="743" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
@@ -2573,9 +2463,9 @@
       <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45067266" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33006537" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33006537" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.024509804" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.024509804" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32899022" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -2587,8 +2477,8 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24501197" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3320032" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
@@ -2608,14 +2498,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="788">
-          <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/ufg/inf/es/eir/web/WebRemedies.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
@@ -2698,9 +2580,39 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/ufg/inf/es/eir/presenter/unit/list/UnitListFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-496">
+          <caret line="90" column="92" lean-forward="false" selection-start-line="90" selection-start-column="92" selection-end-line="90" selection-end-column="92" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1889#1922#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/ufg/inf/es/eir/presenter/remedy/list/RemedyListFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1044">
+          <caret line="73" column="35" lean-forward="false" selection-start-line="73" selection-start-column="21" selection-end-line="73" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/AndroidManifest.xml">
+      <provider editor-type-id="android-manifest">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="25" column="19" lean-forward="false" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/ufg/inf/es/eir/model/Remedy.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-604">
+        <state relative-caret-position="-412">
           <caret line="5" column="43" lean-forward="false" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -2710,7 +2622,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/ufg/inf/es/eir/model/Unit.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1854">
+        <state relative-caret-position="90">
           <caret line="5" column="41" lean-forward="false" selection-start-line="5" selection-start-column="41" selection-end-line="5" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -2770,58 +2682,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/ufg/inf/es/eir/presenter/remedy/RemedyPage.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/ufg/inf/es/eir/PharmacyPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="31" column="35" lean-forward="false" selection-start-line="31" selection-start-column="35" selection-end-line="31" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="774">
+          <caret line="70" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/ufg/inf/es/eir/presenter/unit/list/UnitListFragment.java">
+    <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-496">
-          <caret line="90" column="92" lean-forward="false" selection-start-line="90" selection-start-column="92" selection-end-line="90" selection-end-column="92" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1889#1922#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/ufg/inf/es/eir/presenter/remedy/list/RemedyListFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1044">
-          <caret line="73" column="35" lean-forward="false" selection-start-line="73" selection-start-column="21" selection-end-line="73" selection-end-column="35" />
+        <state relative-caret-position="470">
+          <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/ufg/inf/es/eir/presenter/unit/UnitPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="22" column="57" lean-forward="false" selection-start-line="22" selection-start-column="48" selection-end-line="22" selection-end-column="57" />
+        <state relative-caret-position="108">
+          <caret line="15" column="55" lean-forward="false" selection-start-line="15" selection-start-column="55" selection-end-line="15" selection-end-column="55" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/AndroidManifest.xml">
-      <provider editor-type-id="android-manifest">
-        <state />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/ufg/inf/es/eir/model/Pharmacy.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="25" column="19" lean-forward="false" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
+        <state relative-caret-position="72">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/ufg/inf/es/eir/presenter/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1062">
-          <caret line="86" column="8" lean-forward="false" selection-start-line="86" selection-start-column="8" selection-end-line="86" selection-end-column="8" />
+        <state relative-caret-position="270">
+          <caret line="40" column="25" lean-forward="false" selection-start-line="40" selection-start-column="25" selection-end-line="40" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/ufg/inf/es/eir/presenter/remedy/RemedyPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="50" column="56" lean-forward="false" selection-start-line="50" selection-start-column="56" selection-end-line="50" selection-end-column="56" />
           <folding />
         </state>
       </provider>

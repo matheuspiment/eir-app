@@ -84,7 +84,7 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
 
         List<Remedy> remedies = remedyListFragment.getRemedyList();
         List<Unit> units = unitListFragment.getUnitList();
-        
+
         for (Remedy remedy : remedies) {
             if (remedy.getName().toLowerCase().contains(userInput)) {
                 newRemedies.add(remedy);

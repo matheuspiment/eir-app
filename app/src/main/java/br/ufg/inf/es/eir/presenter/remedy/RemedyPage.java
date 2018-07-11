@@ -47,8 +47,8 @@ public class RemedyPage extends AppCompatActivity {
         code.setText(Integer.toString(remedy.getCode()));
 
         ImageView img = (ImageView) findViewById(R.id.img_remedy);
-        Picasso.get().load(remedy.getImage()).into(img);
 
+        Picasso.get().load(remedy.getImage()).into(img);
 
 //        TextView composition = (TextView) findViewById(R.id.composition_remedy);
 //        composition.setText(String.valueOf(remedy.getComposition()));
