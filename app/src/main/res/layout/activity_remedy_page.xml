@@ -1,119 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/remedy_content"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presenter.remedy.RemedyPage">
+    android:id="@+id/content"
+    android:fillViewport="true">
 
-    <TextView
-        android:id="@+id/name_remedy"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=""
-        android:layout_margin="10dp"
-        />
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/remedy_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="br.ufg.inf.es.eir.presenter.remedy.RemedyPage">
 
-    <TextView
-        android:id="@+id/type_remedy"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=""
-        android:layout_below="@+id/name_remedy"
-        android:layout_marginLeft="10dp"
-        />
+        <TextView
+            android:id="@+id/name_remedy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="22dp"
+            android:layout_margin="10dp"
+            />
 
-    <TextView
-        android:id="@+id/content_remedy"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=""
-        android:layout_below="@+id/type_remedy"
-        android:layout_margin="10dp"
-        />
+        <TextView
+            android:id="@+id/presentation_remedy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="20dp"
+            android:layout_below="@id/name_remedy"
+            android:layout_marginLeft="10dp"
+            />
 
-    <TextView
-        android:id="@+id/lab_remedy"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=""
-        android:layout_below="@+id/content_remedy"
-        android:layout_marginLeft="10dp"/>
-
-    <TextView
-        android:id="@+id/code_text_remedy"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/code"
-        android:layout_below="@+id/lab_remedy"
-        android:layout_margin="10dp"/>
-
-    <TextView
-        android:id="@+id/code_remedy"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=""
-        android:layout_below="@+id/code_text_remedy"
-        android:layout_marginLeft="10dp"/>
+        <TextView
+            android:id="@+id/lab_remedy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="20dp"
+            android:layout_below="@id/presentation_remedy"
+            android:layout_marginLeft="10dp"/>
 
 
-    <ImageView
-        android:id="@+id/img_remedy"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        app:srcCompat="@mipmap/ic_launcher"
-        android:layout_margin="10dp"
-        android:layout_alignParentEnd="true"
-        />
+        <TextView
+            android:id="@+id/code_remedy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_below="@id/lab_remedy"
+            android:layout_margin="10dp"/>
 
-    <TextView
-        android:id="@+id/information_remedy"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/information"
-        android:layout_below="@+id/img_remedy"
-        android:layout_margin="10dp"/>
 
-    <TextView
-        android:id="@+id/composition"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/composition"
-        android:layout_below="@+id/information_remedy"
-        android:layout_margin="10dp"/>
+        <ImageView
+            android:id="@+id/img_remedy"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_margin="10dp"
+            android:layout_alignParentEnd="true" />
 
-    <TextView
-        android:id="@+id/composition_remedy"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=""
-        android:layout_below="@+id/composition"
-        android:layout_margin="10dp"/>
 
-    <Button
-        android:id="@+id/button_download"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/download_remedies"
-        android:layout_below="@+id/composition_remedy"
-        android:layout_alignParentEnd="true"
-        android:layout_margin="10dp"/>
+        <Button
+            android:id="@+id/button_download"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/download_remedies"
+            android:layout_below="@id/img_remedy"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="10dp"/>
 
-    <TextView
-        android:id="@+id/pharmacies"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/pharmacies"
-        android:layout_below="@+id/button_download"
-        android:layout_margin="10dp"/>
+        <TextView
+            android:id="@+id/units"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pharmacies"
+            android:textSize="22dp"
+            android:textStyle="bold"
+            android:layout_below="@id/button_download"
+            android:layout_margin="10dp" />
 
-    <TextView
-        android:id="@+id/pharmacies_phone"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=""
-        android:layout_below="@+id/pharmacies"
-        android:layout_margin="10dp"/>
 
-</RelativeLayout>
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/remedy_unit_list"
+            android:layout_below="@+id/units"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+            tools:listitem="@layout/fragment_item" />
+
+    </RelativeLayout>
+</ScrollView>

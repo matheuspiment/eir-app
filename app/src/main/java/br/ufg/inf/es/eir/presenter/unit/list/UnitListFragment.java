@@ -129,15 +129,11 @@ public class UnitListFragment extends BaseFragment {
     @Subscribe(threadMode = ThreadMode.MAIN)
     public void onMessageEvent(Unit unit) {
         Intent intent = new Intent(getContext(), UnitPage.class);
-//        intent.putExtra("remedy", (Serializable) remedy);
 
         EventBus.getDefault().unregister(this);
         EventBus.getDefault().postSticky(unit);
 
         startActivity(intent);
-//        RemedyDAO dao = new RemedyDAO(getActivity());
-//        adapter.setRemedies(dao.getAll());
-//        adapter.notifyDataSetChanged();
     }
 
     public void updateUnitsDB(List<Unit> units) {

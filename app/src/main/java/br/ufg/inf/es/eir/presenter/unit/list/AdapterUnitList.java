@@ -50,7 +50,7 @@ public class AdapterUnitList extends RecyclerView.Adapter<AdapterUnitList.UnitVi
             }
         });
 
-        holder.descriptionView.setText(unit.getPhone());
+        holder.descriptionView.setText(unit.getPhone() + "\n" + unit.getCity());
     }
 
     @Override

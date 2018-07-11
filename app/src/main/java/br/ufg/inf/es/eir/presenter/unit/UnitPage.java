@@ -1,9 +1,13 @@
 package br.ufg.inf.es.eir.presenter.unit;
 
 import android.os.Bundle;
+import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
+import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.squareup.picasso.Picasso;
 
 import org.greenrobot.eventbus.EventBus;
 
@@ -12,14 +16,11 @@ import br.ufg.inf.es.eir.model.Remedy;
 import br.ufg.inf.es.eir.model.Unit;
 
 public class UnitPage extends AppCompatActivity {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_unit_page);
-
-//        Intent i = getIntent();
-//        Remedy remedy = (Remedy) i.getSerializableExtra("remedy");
-//        setupView(remedy);
 
         Unit unit = EventBus.getDefault().removeStickyEvent(Unit.class);
         setupView(unit);
@@ -36,7 +37,7 @@ public class UnitPage extends AppCompatActivity {
         phone.setText(unit.getPhone());
 
         ImageView img = (ImageView) findViewById(R.id.img_pharmacy);
-//        img.setImageURI(pharmacy.getImage ());
+        Picasso.get().load(unit.getImage()).into(img);
 
         TextView street = (TextView) findViewById(R.id.street_pharmacy);
         street.setText(unit.getStreet());

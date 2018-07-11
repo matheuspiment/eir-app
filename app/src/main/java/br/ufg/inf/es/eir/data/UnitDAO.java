@@ -153,7 +153,9 @@ public class UnitDAO extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getReadableDatabase();
 
         Cursor cursor = db.query(TABLE_UNITS, new String[] { ROW_ID,
-                        ROW_NAME },
+                        ROW_NAME, ROW_IMAGE, ROW_STREET, ROW_NUMBER, ROW_COMPLEMENT,
+                        ROW_REGION, ROW_ZIPCODE, ROW_CITY, ROW_STATE, ROW_COUNTRY,
+                        ROW_PHONE },
                 ROW_ID + "=?",
                 new String[] { String.valueOf(id) },
                 null,
@@ -167,8 +169,19 @@ public class UnitDAO extends SQLiteOpenHelper {
             unit.setId(Integer.parseInt(cursor.getString(
                     0)));
             unit.setName(cursor.getString(1));
+            unit.setImage(cursor.getString(2));
+            unit.setStreet(cursor.getString(3));
+            unit.setNumber(Integer.parseInt(cursor.getString(
+                    4)));
+            unit.setComplement(cursor.getString(5));
+            unit.setRegion(cursor.getString(6));
+            unit.setZipcode(cursor.getString(7));
+            unit.setCity(cursor.getString(8));
+            unit.setState(cursor.getString(9));
+            unit.setCountry(cursor.getString(10));
+            unit.setPhone(cursor.getString(11));
             return unit;
-        } else{
+        } else {
             throw new RuntimeException("Não existe");
         }
 
